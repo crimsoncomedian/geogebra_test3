@@ -31,6 +31,12 @@
             width: 80px;
             margin: 10px 0;
         }
+        #blueArrow {
+            transform: rotate(-90deg); /* Rotate to point upwards */
+        }
+        #redArrow {
+            transform: rotate(90deg); /* Rotate to point downwards */
+        }
         .text {
             font-size: 18px;
             position: absolute;
@@ -41,9 +47,9 @@
         #totalText {
             font-size: 18px;
             position: absolute;
-            left: 10px;
+            left: 50%;
             top: 50%;
-            transform: translateY(-50%);
+            transform: translate(-50%, -50%);
         }
     </style>
 </head>
@@ -57,7 +63,7 @@
             <img id="redArrow" src="RedMergeArrow.png" class="arrow">
             <div id="text2" class="text" style="color: #f03322;">0</div>
         </div>
-        <div id="totalText" style="font-size: 18px; position: absolute; right: 10px; top: 50%;">= 0</div>
+        <div id="totalText">= 0</div>
     </div>
 
     <script src="script.js"></script>
