@@ -9,19 +9,43 @@
             background-color: #d7f4ff;
             position: relative;
             height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
         }
-        img {
-            cursor: pointer;
+        .container {
+            position: relative;
+            text-align: center;
+        }
+        .arrow {
+            width: 100px; /* Adjust size */
+            margin: 20px 0; /* Adjust space between arrows */
+        }
+        .text {
+            font-size: 24px; /* Adjust font size */
+            position: absolute;
+            right: -50px; /* Adjust text positioning relative to arrows */
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        #totalText {
+            left: 50px; /* Adjust total text positioning */
+            top: 50%;
+            transform: translate(-50%, -50%);
         }
     </style>
 </head>
 <body>
-    <img id="blueArrow" src="BlueMergeArrow.png" style="position:absolute; left:10%; top:20%;">
-    <img id="redArrow" src="RedMergeArrow.png" style="position:absolute; left:10%; top:40%;">
-
-    <div id="text1" style="position:absolute; left:50%; top:20%;">0</div>
-    <div id="text2" style="position:absolute; left:50%; top:40%;">0</div>
-    <div id="totalText" style="position:absolute; left:50%; top:30%;">0</div>
+    <div class="container">
+        <img id="blueArrow" src="BlueMergeArrow.png" class="arrow">
+        <div id="text1" class="text" style="color: #0277bd;">0</div>
+    </div>
+    <div class="container">
+        <img id="redArrow" src="RedMergeArrow.png" class="arrow">
+        <div id="text2" class="text" style="color: #f03322;">0</div>
+    </div>
+    <div id="totalText" style="font-size: 24px; position: absolute; right: 10%; top: 50%;">= 0</div>
 
     <script src="script.js"></script>
 </body>
