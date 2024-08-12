@@ -1,19 +1,27 @@
-let up = 0;
-let down = 0;
+let blueValue = 0;
+let redValue = 0;
 
-function updateTotal() {
-    let total = up - down;
-    document.getElementById('text1').textContent = up;
-    document.getElementById('text2').textContent = down;
-    document.getElementById('totalText').textContent = total;
+const blueArrow = document.getElementById('blueArrow');
+const redArrow = document.getElementById('redArrow');
+const text1 = document.getElementById('text1');
+const text2 = document.getElementById('text2');
+const totalText = document.getElementById('totalText');
+
+blueArrow.addEventListener('click', () => {
+    blueValue++;
+    updateDisplay();
+});
+
+redArrow.addEventListener('click', () => {
+    redValue--;
+    updateDisplay();
+});
+
+function updateDisplay() {
+    text1.innerText = blueValue;
+    text2.innerText = redValue;
+    totalText.innerText = `= ${blueValue + redValue}`;
 }
 
-document.getElementById('blueArrow').onclick = function() {
-    up++;
-    updateTotal();
-};
-
-document.getElementById('redArrow').onclick = function() {
-    down++;
-    updateTotal();
-};
+// Initialize the display
+updateDisplay();
