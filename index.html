@@ -26,31 +26,31 @@
         .container {
             position: relative;
             text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
         }
         .arrow {
             width: 80px;
-            margin: 10px 0;
+            margin-right: 20px; /* Space between arrow and text */
         }
         #blueArrow {
-            transform: rotate(90deg); /* Correct rotation to point upwards */
+            transform: rotate(0deg); /* Point upwards */
         }
         #redArrow {
-            transform: rotate(-90deg); /* Rotate to point downwards */
+            transform: rotate(180deg); /* Point downwards */
         }
         .text {
             font-size: 18px;
-            position: absolute;
-            left: 100px; /* Adjust text positioning relative to arrows */
-            top: 50%;
-            transform: translateY(-50%);
+            margin-left: 10px; /* Space between text and arrow */
         }
         #totalText {
             font-size: 24px;
             position: absolute;
-            left: 150px; /* Position the sum to the right of the arrows */
+            right: 20px; /* Adjust horizontal position */
             top: 50%;
             transform: translateY(-50%);
-            text-align: left;
         }
     </style>
 </head>
